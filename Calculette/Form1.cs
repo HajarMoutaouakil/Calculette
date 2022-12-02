@@ -44,11 +44,12 @@ namespace Calculette
             valeur = Double.Parse(ResultatText.Text);
             operation_click = true;
             operateur = button.Text;
-            ResultatText.Text += button.Text;
+            label.Text=valeur+" "+operateur;
         }
 
         private void Egale_click(object sender, EventArgs e)
         {
+            label.Text = label.Text+" "+ResultatText.Text+" =";
             if (operateur == "+")
             {
                 ResultatText.Text = (valeur + double.Parse(ResultatText.Text)).ToString();
